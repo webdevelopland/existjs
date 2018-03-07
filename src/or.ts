@@ -1,9 +1,11 @@
-import { is } from './is';
+import { exist } from './exist';
 
 // Choose first existing object
-export function or(...list: Array<any>): any {
+export function or(...list: any[]): any {
   for (let value of list) {
-    if (is(value)) return value;
+    if (exist(value)) {
+      return value;
+    }
   }
   return null;
 }

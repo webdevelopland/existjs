@@ -1,6 +1,6 @@
 # existjs
-## v1.0.0 ( last update: 9 dec 2017 )
-Is the variable exist and what is its type? The easy way to know. Typescript included.
+## v2.0.0 ( last update: 7 mar 2018 )
+Does the variable exist and what is its type? The easy way to know. Typescript included.
 
 ### Install
 npm
@@ -10,48 +10,44 @@ npm install existjs --save
 
 Node.js
 ```javascript
-const existjs = require('existjs');
-// or
-const { is, not, ... } = require('existjs');
+const { exist, or, ... } = require('existjs');
 ```
 
 Typescript
 ```javascript
-import * as existjs from 'existjs';
-// or
-import { is, not, ... } from 'existjs';
+import { exist, or, ... } from 'existjs';
 ```
 
 Browser
 ```javascript
 <script src='/node_modules/existjs/dist/existjs-min.js'></script>
+<script>
+  // How to use:
+  // existjs.exist();
+  // existjs.or();
+  // ...
+</script>
 ```
 
-### is()
-Is the variable exist?
+### exist()
+Does the variable exist?
 ```javascript
-is(null); // false
-is(undefined); // false
-is(NaN); // false
-is(0); // true
-is(''); // true
-is([]); // true
-is({}); // true
-is(false); // true
-is('hello'); // true
-```
-
-### not()
-Not exist?
-```javascript
-not(undefined); // true
-// not(var) = !is(var)
+exist(null); // false
+exist(undefined); // false
+exist(NaN); // false
+exist(0); // true
+exist(''); // true
+exist([]); // true
+exist({}); // true
+exist(false); // true
+exist('hello'); // true
 ```
 
 ### or()
 It chooses first existing variable
 ```javascript
 var c = or(null, null, undefined, 72, 12, null, 'hi'); // c = 72
+var c = or(undefined, 0, 2); // c = 0
 ```
 
 ### Check types

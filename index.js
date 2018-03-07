@@ -5,6 +5,5 @@ function exportAll(lib) {
 }
 
 exportAll(require('./js/check-types'));
-exportAll(require('./js/is'));
-exportAll(require('./js/not'));
+exportAll(require('./js/exist'));
 exportAll(require('./js/or'));
