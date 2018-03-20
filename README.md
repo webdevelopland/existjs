@@ -1,5 +1,5 @@
 # existjs
-## v2.0.0 ( last update: 7 mar 2018 )
+## v2.1.0 ( last update: 20 mar 2018 )
 Does the variable exist and what is its type? The easy way to know. Typescript included.
 
 ### Install
